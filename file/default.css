@@ -6,6 +6,11 @@ body {
   font-size: 14px;
   font-family: sans-serif;
   overflow: auto;
+  background-color: #000; /* fallback color */
+  background-image: url("../IMG_0244.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 a {
   color: white;
