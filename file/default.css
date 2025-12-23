@@ -1,45 +1,43 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #000; /* solid black background, images removed */
   color: white;
   font-size: 14px;
   font-family: sans-serif;
   overflow: auto;
-  background: #000; /* fallback */
-  position: relative;
 }
 
-/* Background image layer */
-body::before {
-  content: "";
+/* Background image */
+.bg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   background-image: url("../IMG_0244.jpg");
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 
-  filter: blur(8px);
-  transform: scale(1.08); /* avoids blur edges */
+  filter: blur(10px);
+  transform: scale(1.05); /* prevents edges */
   z-index: -2;
 }
 
-/* Dark color backdrop */
-body::after {
-  content: "";
+/* Dark overlay */
+.bg-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
-  background: rgba(0, 0, 0, 0.55); /* darkness level */
+  background: rgba(0, 0, 0, 0.55);
   z-index: -1;
 }
+
 
 a {
   color: white;
